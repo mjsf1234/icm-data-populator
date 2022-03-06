@@ -1,0 +1,21 @@
+form {
+  & .form-group {
+    margin-bottom: $spacing-4;
+  }
+
+  & .form-label {
+    color: $color-gray-dark;
+    font-weight: 500;
+
+    &.optional {
+      color: $color-gray;
+      margin-left: $spacing-2;
+    }
+  }
+
+  & .form-control {
+    &:disabled {
+      color: $color-gray-dark;
+    }
+  }
+}

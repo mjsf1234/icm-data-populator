@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+
+@import "~bootstrap/scss/_functions";
+
+@import "./variables/variables";
+
+$input-btn-padding-x: $padding-x;
+$input-btn-padding-y: $padding-y;
+
+$input-btn-padding-x-sm: $padding-x-sm;
+$input-btn-padding-y-sm: $padding-y-sm;
+
+$input-btn-padding-x-lg: $padding-x-lg;
+$input-btn-padding-y-lg: $padding-y-lg;
+
+$light: $color-gray-light;
+$dark: $color-black;
+
+@import "~bootstrap/scss/_variables";
+@import "./components/components";
+@import "./pages/pages";
+
+// change color map after importing varibales as the map wont be available before that
+
+$custom-theme-colors: (
+  "color-gray-light": $color-gray-light,
+  "color-gray-light-alternative": $color-gray-light-alternative,
+  "color-gray-alternative": $color-gray-alternative,
+  "color-gray": $color-gray,
+  "color-gray-medium": $color-gray-medium,
+  "color-gray-dark": $color-gray-dark,
+  "color-white": $color-white,
+  "color-black": $color-black,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "./bootstrapComponents/bootstrapComponents";
+
+* {
+  font-family: $base-font;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  background-color: $color-gray-light;
+  color: $color-black;
+}
+
+.app,
+#root {
+  width: 100%;
+  height: 100%;
+}

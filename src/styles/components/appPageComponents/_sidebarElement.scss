@@ -1,0 +1,59 @@
+.dashboard-sidebar-element {
+  border-radius: $default-radius;
+  padding: $spacing-1;
+  color: shade-color($color-gray-dark, 15%);
+  font-size: $font-sm;
+  font-weight: 500;
+  border: 1px solid $color-gray-light-alternative;
+  margin: 0 $spacing-2 $spacing-1 $spacing-2;
+  display: flex;
+
+  &--icon {
+    margin-right: $spacing-4;
+    padding-left: $spacing-3;
+    text-align: center;
+    font-size: $font-lg;
+  }
+
+  &--text {
+    align-self: center;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-gray-light;
+    border: 1px solid $color-gray-alternative;
+  }
+
+  &.active {
+    background-color: tint-color($success, 20%);
+    color: $color-white;
+  }
+
+  &.bottom {
+    margin-top: auto;
+  }
+
+  &.constrained &--icon {
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  &.disabled {
+    color: tint-color($color-gray-dark, 40%);
+  }
+
+  &.disabled:hover {
+    background-color: unset;
+    border: 1px solid transparent;
+  }
+
+  &.constrained &--text {
+    display: none;
+  }
+
+  &.constrained {
+    display: block;
+    padding: $spacing-1;
+  }
+}

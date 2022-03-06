@@ -1,0 +1,71 @@
+.dashboard-sidebar {
+  &--header {
+    padding: $spacing-2;
+    margin-bottom: $spacing-4;
+    text-align: center;
+    color: $success;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-logo {
+      max-width: 75px;
+      max-height: 52px;
+      min-height: 36px;
+      min-width: 55px;
+      cursor: pointer;
+
+      & g {
+        fill: $success;
+      }
+
+      &:hover {
+        & g {
+          animation: col 3s infinite reverse;
+        }
+      }
+    }
+
+    &-heading {
+      font-weight: 700;
+      margin-left: $spacing-2;
+    }
+  }
+
+  &--content {
+    height: 100%;
+    padding: $padding-y 0 0 0;
+    margin: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--toggler {
+    margin-top: auto;
+    border-top: 1px solid $color-gray-alternative;
+    padding: $padding-y;
+    text-align: right;
+    &---icon {
+      display: inline-block;
+      padding: $padding-y-xs;
+      border-radius: $rounded;
+      background-color: $color-gray-light;
+      transition: all 300ms ease-out;
+    }
+  }
+
+  &.constrained &--toggler---icon {
+    transform: rotate(180deg);
+  }
+
+  &.constrained &--header-heading {
+    display: none;
+  }
+
+  &.constrained {
+    width: $dashboard-sidebar-width-constrained;
+    min-width: $dashboard-sidebar-width-constrained;
+    max-width: $dashboard-sidebar-width-constrained;
+  }
+}

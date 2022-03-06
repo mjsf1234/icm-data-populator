@@ -1,0 +1,12 @@
+.dashboard-navbar {
+    display: flex;
+    align-items: center;
+    
+    &--title {
+        margin-left: auto;
+        margin: 0 $spacing-3 0 auto;
+        font-weight: 700;
+        color: $color-gray;
+    }
+
+}

@@ -1,0 +1,52 @@
+.empty-state {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: $spacing-2 0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: $color-gray-dark;
+  overflow: hidden;
+
+  &--logo {
+    & g {
+      fill: $color-gray-light-alternative;
+    }
+  }
+
+  & p {
+    max-height: 200px;
+    overflow: auto;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    hyphens: auto;
+    padding: 0 $spacing-1;
+  }
+
+  &--mini &--image {
+    max-width: 200px;
+    max-height: 150px;
+    width: 200px;
+    height: 150px;
+  }
+
+  &--contained &--image {
+    max-width: 75%;
+    max-height: 40%;
+    width: 75%;
+    height: 40%;
+  }
+
+  &--image {
+    max-width: 500px;
+    max-height: 375px;
+    width: 500px;
+    height: 375px;
+    padding: 0 $spacing-2;
+  }
+
+  &--error {
+    color: $danger;
+  }
+}

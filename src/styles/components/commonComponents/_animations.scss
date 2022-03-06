@@ -1,0 +1,14 @@
+@keyframes col {
+  0% {
+    fill: $success;
+  }
+  30% {
+    fill: $primary;
+  }
+  70% {
+    fill: $warning;
+  }
+  100% {
+    fill: $success;
+  }
+}

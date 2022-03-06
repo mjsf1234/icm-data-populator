@@ -1,0 +1,51 @@
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: $dashboard-navbar-height auto $dashboard-footer-height;
+  grid-template-areas:
+    "ds dn"
+    "ds dm"
+    "ds df";
+
+  &-sidebar {
+    grid-area: ds;
+    background-color: $color-white;
+    overflow: hidden;
+    border-right: 1px solid rgba($color: $color-gray-alternative, $alpha: 0.5);
+    color: $color-gray;
+    width: $dashboard-sidebar-width;
+    display: flex;
+    flex-direction: column;
+    max-width: $dashboard-sidebar-expanded-max-width;
+    min-width: $dashboard-sidebar-expanded-min-width;
+    transition: all 300ms ease;
+  }
+
+  &-navbar {
+    grid-area: dn;
+    padding: $spacing-2;
+    display: flex;
+    overflow: hidden;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-gray-alternative;
+  }
+
+  &-main {
+    position: relative;
+    grid-area: dm;
+    text-align: left;
+    overflow: auto;
+    width: 100%;
+  }
+
+  &-footer {
+    grid-area: df;
+    border-top: 1px solid $color-gray-alternative;
+    font-size: x-small;
+    overflow: hidden;
+    padding: 0 $padding-x-xs;
+    text-align: right;
+  }
+}

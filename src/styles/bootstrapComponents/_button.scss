@@ -1,0 +1,55 @@
+.btn {
+  @extend .btn;
+  color: $color-white;
+  font-weight: $semi-bold;
+  margin-right: $margin-r;
+  outline: none !important;
+  box-shadow: none !important;
+
+  &-xs {
+    padding: $spacing-1 $spacing-2;
+    font-size: $font-xs;
+  }
+
+  &.btn-link {
+    color: tint-color($info, 40%);
+
+    &:hover {
+      color: tint-color($info, 20%);
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-white;
+  }
+
+  &:disabled {
+    color: $color-white;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-alternate-#{$color} {
+    color: $value;
+    background-color: tint-color($value, 85%);
+
+    &:hover {
+      color: $value;
+      background-color: tint-color($value, 80%);
+    }
+
+    &:focus,
+    &:active {
+      color: $value;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    color: $value;
+    border-color: tint-color($value, 50%);
+  }
+}

@@ -1,0 +1,11 @@
+.benchmark-main {
+  overflow-y: scroll;
+  height: 75vh;
+  margin: 0;
+}
+.benchmark-main pre {
+  margin: 0;
+}
+.BenchmarkingPreview {
+  margin: auto;
+}
